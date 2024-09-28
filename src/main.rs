@@ -1,13 +1,13 @@
 use std::io;
 struct Rectangle {
-    length: u32,
-    breadth: u32,
+    length: f32,
+    breadth: f32,
 }
 impl Rectangle {
-    fn new(length: u32, breadth: u32) -> Rectangle {
+    fn new(length: f32, breadth: f32) -> Rectangle {
         Rectangle { length, breadth }
     }
-    fn area(&self) -> u32 {
+    fn area(&self) -> f32 {
         self.length * self.breadth
     }
 }
@@ -17,7 +17,7 @@ fn main() {
 
     let mut input = String::new();
     io::stdin().read_line(&mut input).expect("Invalid Input");
-    let inputs: Vec<u32> = input
+    let inputs: Vec<f32> = input
         .trim()
         .split_whitespace()
         .map(|s| s.parse().expect("enter valid number"))
