@@ -22,6 +22,10 @@ fn main() {
         .split_whitespace()
         .map(|s| s.parse().expect("enter valid number"))
         .collect();
+    if inputs.len() != 2 {
+        println!("Please enter exactly two numbers.");
+        return;
+    }
     let (l, b) = (inputs[0], inputs[1]);
     let r1 = Rectangle::new(l, b);
     println!(
